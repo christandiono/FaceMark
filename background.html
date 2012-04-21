@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $("span.UIActionLinks UIActionLinks_bottom").append("
+         ·  
+        <button class="uiFaceMarkIcon" title="Add this post to Facemark">
+            <img src="/images/bookmark.png" alt="FaceMark Button">
+        </button>"
+    );
+
+    $("#uiFaceMarkIcon").click(function () {
+        var CommentInfo = this.prev("a.uiLinkSubtle").attr("href")
+        var IDtoSend = CommentInfo.match("\\d+");
+        alert($IDtoSend);
+    });
+});

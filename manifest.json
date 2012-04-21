@@ -1,0 +1,21 @@
+{
+    "name": "FaceMark",
+    "version": "0.1",
+    "description": "Mark my world.",
+    "icons": {  "16" : "images/icon.png",
+                "48" : "images/48.png",
+                "128" : "images/128.png"},
+    "hoempage_url": "http://electric-sword-7186.herokuapp.com/",
+    "background_page": "background.html",
+     "content_scripts": [
+        {
+          "matches": ["https://www.facebook.com/*", "http://electric-sword-7186.herokuapp.com/"],
+          "js": ["jquery-1.7.2.min.js", "myscript.js"]
+        }
+     ],
+    "browser_action": {
+        "default_icon": "images/facemark.png",
+        "default_title": "FaceMark",
+        "default_popup": "popup.html"
+  }
+}
